@@ -4,8 +4,9 @@
 
 2. Procesar el <a href="https://drive.google.com/file/d/1lGmlAz157fIDp2zk95KInTSJguZusI91/view?usp=sharing">archivo</a> y extraer:
  - Cantidad de vocales
-if __name__ == "__main__":
 ```python
+if __name__ == "__main__":
+
 # Abre el archivo de texto, lo guarda en text y cierra el archivo
 x = open("12.txt")
 text = x.read()
@@ -36,7 +37,7 @@ for  j in text:
 print(sum)
 ```python
  - Cantidad de consonantes
- ```python
+```python
  
 # Abre el archivo de texto, lo guarda en text y cierra el archivo
 x = open("12.txt")
