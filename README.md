@@ -36,9 +36,10 @@ for  j in text:
 # imprime sum    
 print(sum)
 ```python
- - Cantidad de consonantes
+- Cantidad de consonantes
 ```python
- 
+if __name__ == "__main__":
+
 # Abre el archivo de texto, lo guarda en text y cierra el archivo
 x = open("12.txt")
 text = x.read()
@@ -67,7 +68,7 @@ for  j in text:
 
 # imprime sum    
 print(sum)
- ```
+```
  - Listado de las 50 palabras que más se repiten
  - Listado de destinatarios con cantidad de mensajes recibidos
  - Cantidad de mensajes enviados por cada día
