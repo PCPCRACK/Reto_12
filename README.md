@@ -36,6 +36,7 @@ for  j in text:
 # imprime sum    
 print(sum)
 ```python
+
 - Cantidad de consonantes
 ```python
 if __name__ == "__main__":
