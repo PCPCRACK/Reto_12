@@ -71,7 +71,7 @@ print(sum)
 ```
 
 ##  LO ADMITO TUVE QUE USAR CHATGPT PARA HACER ESTO, NO ENCONTRE UNA FORMA DE HACERLO
-![descarga](https://github.com/PCPCRACK/Reto_12/assets/127131700/4a4cb7ef-f072-408b-b689-73c27aff1a06)
+[![descarga](https://github.com/PCPCRACK/Reto_12/assets/127131700/4a4cb7ef-f072-408b-b689-73c27aff1a06)](https://github.com/PCPCRACK/Reto_12/issues/1#issue-1732487533)
 
 - Listado de las 50 palabras que más se repiten
 ```python
