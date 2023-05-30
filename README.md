@@ -103,6 +103,30 @@ for j, p in PLC:
 ```
 - Listado de destinatarios con cantidad de mensajes recibidos
 ```python
+def encontrar_palabra(texto, palabra):
+    palabras = texto.split()
+    indice = None
+
+    for i, p in enumerate(palabras):
+        if p == palabra:
+            indice = i
+            break
+
+    if indice is not None and indice + 1 < len(palabras):
+        siguiente_palabra = palabras[indice + 1]
+        return siguiente_palabra
+    else:
+        return None
+
+texto = "Este es un ejemplo de texto. Quiero encontrar la palabra necesito y guardar la siguiente palabra después de ella."
+
+palabra_buscada = "necesito"
+siguiente_palabra = encontrar_palabra(texto, palabra_buscada)
+
+if siguiente_palabra is not None:
+    print(f"La siguiente palabra después de '{palabra_buscada}' es: {siguiente_palabra}")
+else:
+    print(f"No se encontró la palabra '{palabra_buscada}' en el texto.")
 
 ```
 - Cantidad de mensajes enviados por cada día
