@@ -71,8 +71,7 @@ print(sum)
 ```
 
 ##  LO ADMITO TUVE QUE USAR CHATGPT PARA HACER ESTO, NO ENCONTRE UNA FORMA DE HACERLO
-[![descarga](https://github.com/PCPCRACK/Reto_12/assets/127131700/4a4cb7ef-f072-408b-b689-73c27aff1a06)](https://github.com/PCPCRACK/Reto_12/issues/1#issue-1732487533)
-
+![lv_0_20230530101004.gif](https://github.com/PCPCRACK/Reto_12/assets/127131700/1488757a-4b11-4cfd-9599-9f0fee3c9d81)
 - Listado de las 50 palabras que más se repiten
 ```python
 # Abre el archivo de texto, lo guarda en text y cierra el archivo
