@@ -103,6 +103,22 @@ for j, p in PLC:
 ```
 - Listado de destinatarios con cantidad de mensajes recibidos
 ```python
+file = open("12.txt", "r")
+lin : int = 1
+buscador = {}
+for line in file.readlines():
+    if line.upper().find('FROM') != -1:
+        buscador[line] = 1
+
+    lin += 1
+file.close()
+
+for p in buscador.items():
+    print(f"{p}")
+
+
+
+
 def encontrar_palabra(texto, palabra):
     palabras = texto.split()
     indice = None
