@@ -103,47 +103,43 @@ for j, p in PLC:
 ```
 - Listado de destinatarios con cantidad de mensajes recibidos
 ```python
-file = open("12.txt", "r")
-lin : int = 1
-buscador = {}
-for line in file.readlines():
-    if line.upper().find('FROM') != -1:
-        buscador[line] = 1
+if __name__ == "__main__":
+    
+    file = open("12.txt", "r")
+    catalogador = {}
+    archivados = []
+    archivados2 = []
+    contador = {}
+    contador2 = {}
+    for line in file.readlines():
+        if line.upper().find('FROM') != -1:
+            if line.upper().find('RECEIVED') != -1:
+                z = line.split()
+                archivados.append(z[2])
+            elif line.upper().find('FROM') < 10:
+                z = line.split()
+                archivados2.append(z[1])
 
-    lin += 1
-file.close()
+    for j in archivados:
+        if j in contador:
+            contador[j] += 1
+        else:
+            contador[j] = 1
 
-for p in buscador.items():
-    print(f"{p}")
+    for j in archivados2:
+        if j in contador2:
+            contador2[j] += 1
+        else:
+            contador2[j] = 1
 
+    for j,p in contador2.items():
+        print(f"El usuario {j} envio {p} mensajes")
 
+    print(" ")
+    print(" ")
 
-
-def encontrar_palabra(texto, palabra):
-    palabras = texto.split()
-    indice = None
-
-    for i, p in enumerate(palabras):
-        if p == palabra:
-            indice = i
-            break
-
-    if indice is not None and indice + 1 < len(palabras):
-        siguiente_palabra = palabras[indice + 1]
-        return siguiente_palabra
-    else:
-        return None
-
-texto = "Este es un ejemplo de texto. Quiero encontrar la palabra necesito y guardar la siguiente palabra después de ella."
-
-palabra_buscada = "necesito"
-siguiente_palabra = encontrar_palabra(texto, palabra_buscada)
-
-if siguiente_palabra is not None:
-    print(f"La siguiente palabra después de '{palabra_buscada}' es: {siguiente_palabra}")
-else:
-    print(f"No se encontró la palabra '{palabra_buscada}' en el texto.")
-
+    for j,p in contador.items():
+        print(f"El usuario {j} recibio {p} mensajes")
 ```
 - Cantidad de mensajes enviados por cada día
 ```python
