@@ -70,7 +70,7 @@ for  j in text:
 print(sum)
 ```
 
-##  LO ADMITO TUVE QUE USAR CHATGPT PARA HACER ESTO, NO ENCONTRE UNA FORMA DE HACERLO
+##  LO ADMITO TUVE QUE USAR CHATGPT PARA HACER ESTE PUNTO, NO ENCONTRE UNA FORMA DE HACERLO
 ![lv_0_20230530101004.gif](https://github.com/PCPCRACK/Reto_12/assets/127131700/1488757a-4b11-4cfd-9599-9f0fee3c9d81)
 - Listado de las 50 palabras que más se repiten
 ```python
