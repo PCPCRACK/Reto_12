@@ -86,9 +86,13 @@ text = text.replace('.',' ').replace('?',' ').replace('!',' ').replace(',',' ')
 # Divide el texto en palabras individuales
 palabras = text.split()
 
-# Crea un diccionaria para contar la frecuencia de cada palabra
+# Crea un diccionaria
 contador = {}
+
+# Crea un bucle para cada palabra en palabras
 for j in palabras:
+
+    # Si j esta en el diccionario contador le suma 1 sino la añade
     if j in contador:
         contador[j] += 1
     else:
@@ -104,40 +108,71 @@ for j, p in PLC:
 - Listado de destinatarios con cantidad de mensajes recibidos
 ```python
 if __name__ == "__main__":
-    
+
+    # Abre el archivo
     file = open("12.txt", "r")
-    catalogador = {}
+
+    # Crea 3 diccionarios y 2 listas
     archivados = []
     archivados2 = []
+    catalogador = {}
     contador = {}
     contador2 = {}
-    for line in file.readlines():
-        if line.upper().find('FROM') != -1:
-            if line.upper().find('RECEIVED') != -1:
-                z = line.split()
-                archivados.append(z[2])
-            elif line.upper().find('FROM') < 10:
-                z = line.split()
-                archivados2.append(z[1])
 
+    # Lee el archivo por lineas
+    for line in file.readlines():
+
+        # Vuelve mayuscula la linea y busca la palabra("FROM")
+        if line.upper().find('FROM') != -1:
+
+            # Vuelve mayuscula la linea y busca la palabra("RECEIVED")
+            if line.upper().find('RECEIVED') != -1:
+
+                # Separa la linea por palabras
+                z = line.split()
+
+                # Añade la palabra despues del FROM 
+                archivados.append(z[2])
+
+            # Vuelve mayuscula la linea y busca la palabra("FROM") y si el resultado de find es menor a 10
+            else line.upper().find('FROM') < 10:
+
+                # Separa la linea por palabras
+                z = line.split()
+
+                # Añade la palabra despues del FROM 
+                archivados2.append(z[1])
+    # Cierra el archivo
+    file.close()
+
+    # Crea un bucle para cada palabra de archivados
     for j in archivados:
+
+        # Si j esta en el diccionario contador le suma 1 sino la añade
         if j in contador:
             contador[j] += 1
         else:
             contador[j] = 1
 
+    # Crea un bucle para cada palabra de archivados2
     for j in archivados2:
+
+        # Si j esta en el diccionario contador2 le suma 1 sino la añade
         if j in contador2:
             contador2[j] += 1
         else:
             contador2[j] = 1
 
+    # Crea un bucle para j y p para los items del contador2
     for j,p in contador2.items():
         print(f"El usuario {j} envio {p} mensajes")
 
+
+    # Imprime dos espacios para diferenciar
     print(" ")
     print(" ")
 
+    # Crea un bucle para j y p para los items del contador
     for j,p in contador.items():
         print(f"El usuario {j} recibio {p} mensajes")
 ```
