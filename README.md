@@ -178,5 +178,34 @@ if __name__ == "__main__":
 ```
 - Cantidad de mensajes enviados por cada día
 ```python
+if __name__ == "__main__":
 
+    # Abre el archivo
+    file = open("12.txt", "r")
+    Separador = []
+    juntador = []
+    ya = []
+    Calendario = {}
+    sum = int(2)
+    for linea in file.readlines():
+        if linea.upper().find('DATE:') != -1:
+            if sum%2 == 0:
+                z = linea.split()
+                z.pop(0)
+                for h in range(len(z)-3):
+                    z.pop()
+                ya = z
+                ya = str(ya)
+                ya = ya.replace(',','').replace("'",'').replace('[','').replace(']','')
+                Separador.append(ya)
+            sum += 1
+
+    for j in Separador:
+        if j in Calendario:
+            Calendario[j] +=1
+        else:
+            Calendario[j] =1
+
+    for j,p in Calendario.items():
+        print(f"El dia {j} se enviaron {p} mensajes")
 ```
