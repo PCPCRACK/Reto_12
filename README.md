@@ -189,7 +189,7 @@ if __name__ == "__main__":
     ya = []
     Calendario = {}
 
-    Crea un contador igual a 2
+    # Crea un contador igual a 2
     sum = int(2)
 
     # Lee el archivo por lineas
