@@ -219,8 +219,10 @@ if __name__ == "__main__":
 
                 # remplaza ',',"'",']'y'[' por espacios
                 ya = ya.replace(',','').replace("'",'').replace('[','').replace(']','')
+
                 # se agrega ya a la lista seoarador
                 Separador.append(ya)
+
             # En cada ciclo suma 1 a sum
             sum += 1
 
