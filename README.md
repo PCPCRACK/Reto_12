@@ -182,30 +182,57 @@ if __name__ == "__main__":
 
     # Abre el archivo
     file = open("12.txt", "r")
+
+    # Crea 3 listas y 1 diccionario
     Separador = []
     juntador = []
     ya = []
     Calendario = {}
+
+    Crea un contador igual a 2
     sum = int(2)
+
+    # Lee el archivo por lineas
     for linea in file.readlines():
+
+        # Vuelve mayuscula la linea y busca la palabra("DATE:") y si el resultado de find es diferente de -1
         if linea.upper().find('DATE:') != -1:
+
+            # Si la division por residuo de sum es igual a 0
             if sum%2 == 0:
+
+                # Separa linea por palabras
                 z = linea.split()
+
+                # Remueve la primera palaba
                 z.pop(0)
+
+                # Crea un bucle en el tamaño de z -3
                 for h in range(len(z)-3):
+
+                    # Remueve la ultima palabra de la lista z
                     z.pop()
+
+                # Ya se vuelve z y ya se vuelve un cadena de caracteres
                 ya = z
                 ya = str(ya)
+
+                # remplaza ',',"'",']'y'[' por espacios
                 ya = ya.replace(',','').replace("'",'').replace('[','').replace(']','')
+                # se agrega ya a la lista seoarador
                 Separador.append(ya)
+            # En cada ciclo suma 1 a sum
             sum += 1
 
+    # Crea un bucle para cada elemento de Separador
     for j in Separador:
+        # Si j esta en el diccionario separador suma 1 sino lo añade al diccionario calendario
         if j in Calendario:
             Calendario[j] +=1
         else:
             Calendario[j] =1
 
+    # Crea un bucle para j y p para los items del calendario
     for j,p in Calendario.items():
         print(f"El dia {j} se enviaron {p} mensajes")
 ```
