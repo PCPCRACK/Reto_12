@@ -228,6 +228,7 @@ if __name__ == "__main__":
 
     # Crea un bucle para cada elemento de Separador
     for j in Separador:
+
         # Si j esta en el diccionario separador suma 1 sino lo añade al diccionario calendario
         if j in Calendario:
             Calendario[j] +=1
